@@ -16,7 +16,6 @@ export default function Form(props) {
 		console.log(e.target.name);
 		const { value } = e.target;
 		setForm({ ...form, [e.target.name]: value });
-		// setData({...form, })
 	};
 	const submitForm = (e) => {
 		e.preventDefault();
