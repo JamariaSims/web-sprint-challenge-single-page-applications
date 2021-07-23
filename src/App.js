@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Form from "./components/Form";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./components/Home";
 
 function App() {
 	const [data, setData] = useState([]);
@@ -14,14 +15,7 @@ function App() {
 		<Router>
 			{" "}
 			<Route path="/">
-				<div className="App">
-					{data &&
-						data.map((x, y) => (
-							<>
-								<p>{JSON.stringify(x)}</p>
-							</>
-						))}
-				</div>
+				<Home />
 			</Route>
 			<Route path="/form">
 				<Form data={data} setData={setData} />

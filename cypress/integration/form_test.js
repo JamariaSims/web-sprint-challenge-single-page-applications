@@ -1,17 +1,15 @@
 describe("example to-do app", () => {
 	beforeEach(() => {
-		cy.visit("http://localhost:3000/");
+		cy.visit("http://localhost:3000/form");
 	});
 
 	it("Check for text input", () => {
-		cy.get('[id="name-input"]').then(($input) => {
-			const input = $input;
-			.and("hht",value)
-		});
-		cy.get(`[id = "order-button"]`)
-			.click()
-			.then(($res) => {
-				console.log($res);
-			});
+		cy.get("input[name='name']")
+			.type("Jamaria")
+			.should("have.value", "Jamaria");
+		cy.get(`[data-cy=special]`)
+			.type("Leave at door!")
+			.should("have.value", "Leave at door!");
+		cy.get(`[type=checkbox]`).check();
 	});
 });

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
 	return (
@@ -10,7 +11,9 @@ function Home() {
 			</nav>
 			<div className="con1">
 				<img />
-				<button>Pizza?</button>
+				<Link to={"/form"}>
+					<button>Pizza?</button>
+				</Link>
 			</div>
 			<div className="con2"></div>
 			<div className="con3"></div>

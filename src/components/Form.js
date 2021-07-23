@@ -30,6 +30,7 @@ export default function Form(props) {
 			<form onSubmit={submitForm}>
 				<label htmlFor="name">Name</label>
 				<input
+					data-cy="name"
 					id="name-input"
 					type="text"
 					name="name"
@@ -38,6 +39,7 @@ export default function Form(props) {
 				/>
 				<label htmlFor="size">Size</label>
 				<select
+					data-cy="size"
 					htmlFor="size"
 					id="size-dropdown"
 					value={form.size}
@@ -64,6 +66,7 @@ export default function Form(props) {
 					<label>
 						Pepperoni{" "}
 						<input
+							data-cy="pepperoni1"
 							type="checkbox"
 							name="topping1"
 							value="pepperoni"
@@ -73,6 +76,7 @@ export default function Form(props) {
 					<label>
 						Mushroom{" "}
 						<input
+							data-cy="mushroom1"
 							type="checkbox"
 							name="topping1"
 							value="mushroom"
@@ -82,6 +86,7 @@ export default function Form(props) {
 					<label>
 						Sausage{" "}
 						<input
+							data-cy="sausage1"
 							type="checkbox"
 							name="topping1"
 							value="sausage"
@@ -91,6 +96,7 @@ export default function Form(props) {
 					<label>
 						Extra Cheese{" "}
 						<input
+							data-cy="extraCheese1"
 							type="checkbox"
 							name="topping1"
 							value="extraCheese"
@@ -104,6 +110,7 @@ export default function Form(props) {
 					<label>
 						Pepperoni{" "}
 						<input
+							data-cy="pepperoni2"
 							type="checkbox"
 							name="topping2"
 							value="pepperoni"
@@ -113,6 +120,7 @@ export default function Form(props) {
 					<label>
 						Mushroom{" "}
 						<input
+							data-cy="mushroom2"
 							type="checkbox"
 							name="topping2"
 							value="mushroom"
@@ -122,6 +130,7 @@ export default function Form(props) {
 					<label>
 						Sausage{" "}
 						<input
+							data-cy="sausage2"
 							type="checkbox"
 							name="topping2"
 							value="sausage"
@@ -131,6 +140,7 @@ export default function Form(props) {
 					<label>
 						Extra Cheese{" "}
 						<input
+							data-cy="extraCheese2"
 							type="checkbox"
 							name="topping2"
 							value="extraCheese"
@@ -142,14 +152,25 @@ export default function Form(props) {
 					Special
 					<input
 						id="special-text"
+						data-cy="special"
 						type="text"
 						name="special"
 						checked={form.special}
 						onChange={handleChange}
 					/>
 				</label>
-				<button id="order-button">Ready!</button>
+				<button data-cy="order" id="order-button">
+					Ready!
+				</button>
 			</form>
+			<div className="App">
+				{data &&
+					data.map((x, y) => (
+						<>
+							<p>{JSON.stringify(x)}</p>
+						</>
+					))}
+			</div>
 		</div>
 	);
 }
