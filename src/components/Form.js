@@ -12,8 +12,11 @@ export default function Form(props) {
 	const { data, setData } = props;
 	const [form, setForm] = useState(initialData);
 	const handleChange = (e) => {
+		console.log(e.target.value);
+		console.log(e.target.name);
 		const { value } = e.target;
 		setForm({ ...form, [e.target.name]: value });
+		// setData({...form, })
 	};
 	const submitForm = (e) => {
 		e.preventDefault();
@@ -24,48 +27,129 @@ export default function Form(props) {
 		});
 	};
 	return (
-		<div className="formInput">
+		<div className="formInput" id="pizza-form">
 			<form onSubmit={submitForm}>
 				<label htmlFor="name">Name</label>
 				<input
+					id="name-input"
 					type="text"
 					name="name"
 					value={form.name}
 					onChange={handleChange}
 				/>
 				<label htmlFor="size">Size</label>
-				<input
-					type="text"
-					name="size"
+				<select
+					htmlFor="size"
+					id="size-dropdown"
 					value={form.size}
+					name="size"
 					onChange={handleChange}
-				/>
-				<label htmlFor="topping1">Topping 1</label>
-				<input
-					type="radio"
-					name="topping1"
-					value={form.topping1}
-					onChange={handleChange}
-				/>
-				<label htmlFor="topping2">
+				>
+					<option></option>
+					<option onChange={handleChange} value="small">
+						Small
+					</option>
+					<option onChange={handleChange} value="medium">
+						Medium
+					</option>
+					<option onChange={handleChange} value="large">
+						Large
+					</option>
+					<option onChange={handleChange} value="giant">
+						Giant
+					</option>
+				</select>
+
+				<label htmlFor="topping1" name="topping1">
+					Topping 1{" "}
+					<label>
+						Pepperoni{" "}
+						<input
+							type="checkbox"
+							name="topping1"
+							value="pepperoni"
+							onChange={handleChange}
+						/>
+					</label>
+					<label>
+						Mushroom{" "}
+						<input
+							type="checkbox"
+							name="topping1"
+							value="mushroom"
+							onChange={handleChange}
+						/>
+					</label>
+					<label>
+						Sausage{" "}
+						<input
+							type="checkbox"
+							name="topping1"
+							value="sausage"
+							onChange={handleChange}
+						/>
+					</label>
+					<label>
+						Extra Cheese{" "}
+						<input
+							type="checkbox"
+							name="topping1"
+							value="extraCheese"
+							onChange={handleChange}
+						/>
+					</label>
+				</label>
+
+				<label htmlFor="topping2" name="topping2">
 					Topping 2
-					<input
-						type="radio"
-						name="topping2"
-						checked={form.topping2}
-						onChange={handleChange}
-					/>
+					<label>
+						Pepperoni{" "}
+						<input
+							type="checkbox"
+							name="topping2"
+							value="pepperoni"
+							onChange={handleChange}
+						/>
+					</label>
+					<label>
+						Mushroom{" "}
+						<input
+							type="checkbox"
+							name="topping2"
+							value="mushroom"
+							onChange={handleChange}
+						/>
+					</label>
+					<label>
+						Sausage{" "}
+						<input
+							type="checkbox"
+							name="topping2"
+							value="sausage"
+							onChange={handleChange}
+						/>
+					</label>
+					<label>
+						Extra Cheese{" "}
+						<input
+							type="checkbox"
+							name="topping2"
+							value="extraCheese"
+							onChange={handleChange}
+						/>
+					</label>
 				</label>
 				<label htmlFor="special">
 					Special
 					<input
+						id="special-text"
 						type="text"
 						name="special"
 						checked={form.special}
 						onChange={handleChange}
 					/>
 				</label>
-				<button>Ready!</button>
+				<button id="order-button">Ready!</button>
 			</form>
 		</div>
 	);
