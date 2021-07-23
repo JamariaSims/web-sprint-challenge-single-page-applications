@@ -1,20 +1,7 @@
 import React from "react";
+import Form from "./components/Form";
 
 const App = () => {
-	return (
-		<div className="app">
-			<nav>
-				<h1>LAMBDA EATS</h1>
-				<button>Home</button>
-				<button>Help</button>
-			</nav>
-			<div className="con1">
-				<img />
-				<button>Pizza?</button>
-			</div>
-			<div className="con2"></div>
-			<div className="con3"></div>
-		</div>
-	);
+	return <Form />;
 };
 export default App;
