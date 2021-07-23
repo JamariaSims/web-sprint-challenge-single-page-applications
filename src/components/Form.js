@@ -65,6 +65,7 @@ export default function Form(props) {
 						onChange={handleChange}
 					/>
 				</label>
+				<button>Ready!</button>
 			</form>
 		</div>
 	);
