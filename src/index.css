@@ -70,12 +70,6 @@ td {
 
 html,body{
   width: 100%;
-  display: flex;
-  display: column;
-  justify-content: center;
-  text-align: center;
-  margin: 0%;
-  font-family: sans-serif;
 }
 .navBar{
   display: flex;
@@ -112,26 +106,56 @@ padding: 2%;
 }
 .con1 div{
   position:relative;
+  box-shadow: rgb(185, 0, 0) 2px 2px;
+  text-align: center;
   width: 20%;
   padding: 1% 2% 1% 2%;
   background: red;
-  color: black;
+  color: rgb(255, 255, 255);
   margin: 0% auto;
 }
 .formInput{
   display: flex;
   position: relative;
   flex-direction: column;
-  background: #ff0000;
   margin: 0% auto;
   width: 100%;
 }
 form{
-  background: rgb(156, 156, 156);
+  color: rgb(0, 0, 0);
+background-image:image('pic1');
   text-align: center;
   height: 30vh;
   padding-top: 5%;
 }
 form label{
   margin: 2%;
+}
+.f1{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  width: 90%;
+  height: 10%;
+  margin: 0% auto;
+}
+.f2,.f3{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  width: 90%;
+  height: 11%;
+  padding: 5%;
+  margin: 0% auto;
+}
+.f1 label,.f2 label,.f3 label{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  text-align: center;
+  width: 90%;
+  height: 11%;
+  margin: 0%;
 }
