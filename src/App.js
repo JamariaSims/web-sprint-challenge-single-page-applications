@@ -14,7 +14,7 @@ function App() {
 	return (
 		<Router>
 			{" "}
-			<Route path="/">
+			<Route exact path="/">
 				<Home />
 			</Route>
 			<Route path="/form">

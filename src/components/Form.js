@@ -26,151 +26,167 @@ export default function Form(props) {
 		});
 	};
 	return (
-		<div className="formInput" id="pizza-form">
-			<form onSubmit={submitForm}>
-				<label htmlFor="name">Name</label>
-				<input
-					data-cy="name"
-					id="name-input"
-					type="text"
-					name="name"
-					value={form.name}
-					onChange={handleChange}
-				/>
-				<label htmlFor="size">Size</label>
-				<select
-					data-cy="size"
-					htmlFor="size"
-					id="size-dropdown"
-					value={form.size}
-					name="size"
-					onChange={handleChange}
-				>
-					<option></option>
-					<option onChange={handleChange} value="small">
-						Small
-					</option>
-					<option onChange={handleChange} value="medium">
-						Medium
-					</option>
-					<option onChange={handleChange} value="large">
-						Large
-					</option>
-					<option onChange={handleChange} value="giant">
-						Giant
-					</option>
-				</select>
-
-				<label htmlFor="topping1" name="topping1">
-					Topping 1{" "}
-					<label>
-						Pepperoni{" "}
-						<input
-							data-cy="pepperoni1"
-							type="checkbox"
-							name="topping1"
-							value="pepperoni"
-							onChange={handleChange}
-						/>
-					</label>
-					<label>
-						Mushroom{" "}
-						<input
-							data-cy="mushroom1"
-							type="checkbox"
-							name="topping1"
-							value="mushroom"
-							onChange={handleChange}
-						/>
-					</label>
-					<label>
-						Sausage{" "}
-						<input
-							data-cy="sausage1"
-							type="checkbox"
-							name="topping1"
-							value="sausage"
-							onChange={handleChange}
-						/>
-					</label>
-					<label>
-						Extra Cheese{" "}
-						<input
-							data-cy="extraCheese1"
-							type="checkbox"
-							name="topping1"
-							value="extraCheese"
-							onChange={handleChange}
-						/>
-					</label>
-				</label>
-
-				<label htmlFor="topping2" name="topping2">
-					Topping 2
-					<label>
-						Pepperoni{" "}
-						<input
-							data-cy="pepperoni2"
-							type="checkbox"
-							name="topping2"
-							value="pepperoni"
-							onChange={handleChange}
-						/>
-					</label>
-					<label>
-						Mushroom{" "}
-						<input
-							data-cy="mushroom2"
-							type="checkbox"
-							name="topping2"
-							value="mushroom"
-							onChange={handleChange}
-						/>
-					</label>
-					<label>
-						Sausage{" "}
-						<input
-							data-cy="sausage2"
-							type="checkbox"
-							name="topping2"
-							value="sausage"
-							onChange={handleChange}
-						/>
-					</label>
-					<label>
-						Extra Cheese{" "}
-						<input
-							data-cy="extraCheese2"
-							type="checkbox"
-							name="topping2"
-							value="extraCheese"
-							onChange={handleChange}
-						/>
-					</label>
-				</label>
-				<label htmlFor="special">
-					Special
+		<>
+			<div className="navBar">
+				<div className="title">LAMBDA EATS</div>
+				<div className="sideBar">
+					<a href="/">Home</a>
+					<a href="/help">Help</a>
+				</div>
+			</div>
+			<div className="formInput" id="pizza-form">
+				<form onSubmit={submitForm}>
+					<label htmlFor="name">Name</label>
+					<br></br>
 					<input
-						id="special-text"
-						data-cy="special"
+						data-cy="name"
+						id="name-input"
 						type="text"
-						name="special"
-						checked={form.special}
+						name="name"
+						value={form.name}
 						onChange={handleChange}
 					/>
-				</label>
-				<button data-cy="order" id="order-button">
-					Ready!
-				</button>
-			</form>
-			<div className="App">
-				{data &&
-					data.map((x, y) => (
-						<>
-							<p>{JSON.stringify(x)}</p>
-						</>
-					))}
+					<br></br>
+					<label htmlFor="size">Size</label>
+					<br></br>
+					<select
+						data-cy="size"
+						htmlFor="size"
+						id="size-dropdown"
+						value={form.size}
+						name="size"
+						onChange={handleChange}
+					>
+						<option></option>
+						<option onChange={handleChange} value="small">
+							Small
+						</option>
+						<option onChange={handleChange} value="medium">
+							Medium
+						</option>
+						<option onChange={handleChange} value="large">
+							Large
+						</option>
+						<option onChange={handleChange} value="giant">
+							Giant
+						</option>
+					</select>
+					<br></br>
+					<label htmlFor="topping1" name="topping1">
+						Topping 1{" "}
+						<label>
+							<br></br>
+							Pepperoni{" "}
+							<input
+								data-cy="pepperoni1"
+								type="checkbox"
+								name="topping1"
+								value="pepperoni"
+								onChange={handleChange}
+							/>
+						</label>
+						<label>
+							Mushroom{" "}
+							<input
+								data-cy="mushroom1"
+								type="checkbox"
+								name="topping1"
+								value="mushroom"
+								onChange={handleChange}
+							/>
+						</label>
+						<label>
+							Sausage{" "}
+							<input
+								data-cy="sausage1"
+								type="checkbox"
+								name="topping1"
+								value="sausage"
+								onChange={handleChange}
+							/>
+						</label>
+						<label>
+							Extra Cheese{" "}
+							<input
+								data-cy="extraCheese1"
+								type="checkbox"
+								name="topping1"
+								value="extraCheese"
+								onChange={handleChange}
+							/>
+						</label>
+					</label>
+					<br></br>
+					<label htmlFor="topping2" name="topping2">
+						Topping 2
+						<label>
+							<br></br>
+							Pepperoni{" "}
+							<input
+								data-cy="pepperoni2"
+								type="checkbox"
+								name="topping2"
+								value="pepperoni"
+								onChange={handleChange}
+							/>
+						</label>
+						<label>
+							Mushroom{" "}
+							<input
+								data-cy="mushroom2"
+								type="checkbox"
+								name="topping2"
+								value="mushroom"
+								onChange={handleChange}
+							/>
+						</label>
+						<label>
+							Sausage{" "}
+							<input
+								data-cy="sausage2"
+								type="checkbox"
+								name="topping2"
+								value="sausage"
+								onChange={handleChange}
+							/>
+						</label>
+						<label>
+							Extra Cheese{" "}
+							<input
+								data-cy="extraCheese2"
+								type="checkbox"
+								name="topping2"
+								value="extraCheese"
+								onChange={handleChange}
+							/>
+						</label>
+					</label>
+					<label htmlFor="special">
+						Special
+						<br></br>
+						<input
+							id="special-text"
+							data-cy="special"
+							type="text"
+							name="special"
+							checked={form.special}
+							onChange={handleChange}
+						/>
+					</label>
+					<br></br>
+					<button data-cy="order" id="order-button">
+						Ready!
+					</button>
+				</form>
+				<div className="App">
+					{data &&
+						data.map((x, y) => (
+							<>
+								<p>{JSON.stringify(x)}</p>
+							</>
+						))}
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }
